@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static '../static/css/base.css' %}">
+    <title>Success</title>
+</head>
+<body onload="setTimeout(function() { document.frm1.submit() }, 7000)">
+	<div class="container">
+		<h1>Member Alerted Successfully!</h1>
+
+		<form action="{% url 'gesture:emergency' %}" name="frm1">
+
+		</form>
+
+		<form action="{% url 'gesture:safe' %}">
+		    <input type="submit" value="Safe" id="safe">
+		</form>
+	</div>
+</body>
+</html>

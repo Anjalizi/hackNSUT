@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+
+
+{% load static %}
+<html manifest="letterpaint.manifest" lang="en-US">
+<head>
+  <meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8">
+  <title>Steady Writing</title>
+
+  <link rel="stylesheet" type="text/css" href="{% static '../static/css/letterpaint.css' %}">
+</head>
+
+
+<body>
+  <div id="container" class="container">
+
+    <div id="chars" class="gamedata">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789</div>
+
+    <canvas></canvas>
+
+    <h1 class="toppanel">Test your Handwriting here</h1>
+
+    <div id="intro" class="cover">
+      <p>Improve the steadiness of your hand and try to paint over the letter you see on the screen without going outside of it!</p>
+      <button class="actionbutton">➜</button>
+    </div>
+
+    <button id="sound" class="navbutton">♬</button>
+    <button id="infos" class="navbutton">i</button>
+
+    <div id="win" class="cover check">
+      <p>Good job!</p>
+      <button class="actionbutton">➜</button>
+    </div>
+
+    <div id="error" class="cover">
+      <p>You painted outside the letter!</p>
+      <button class="actionbutton">➜</button>
+    </div>
+
+    <div id="info" class="cover infopanel">
+      <!-- <h1>letterpaint</h1> -->
+      <!-- <p>version 1.0</p> -->
+      <!-- <p>Written by Chris Heilmann</p> -->
+      <button id="install" class="inlinebutton">Install this</button>
+    </div>
+
+    <button class="actionbutton undo" id="reload">X</button>
+  </div>
+
+  <!-- http://freesound.org/people/NenadSimic/sounds/150879/ -->
+  <audio src="{% static '../static/audio/win.ogg' %}" id="winsound"></audio>
+  <!-- http://freesound.org/people/Autistic%20Lucario/sounds/142608/ -->
+  <audio src="{% static '../static/audio/error.ogg' %}" id="errorsound"></audio>
+
+  <script src="{% static '../static/js/letterpaint.js' %}"></script>
+</body>
+</html>

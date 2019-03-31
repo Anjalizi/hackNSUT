@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Landing</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static '../static/css/landing.css' %}">
+	<style type="text/css">body{
+		background-image: url(https://images.unsplash.com/photo-1488554378835-f7acf46e6c98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80);
+		background-repeat: no-repeat;
+		background-size: cover;
+		 background-position: center;
+	}</style>
+</head>
+<body>
+	<!-- <nav class="navbar navbar-expand-sm bg-danger navbar-danger sticky-top ">
+		<ul class="navbar-nav justify-content-left">
+    <li class="nav-item">
+      <a class="nav-link" href="#" style="color: white">Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" style="color: white">Sign Up</a>
+    </li>
+		</nav> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand">Parkinson Pal</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    
+    <!-- <span class="navbar-text">
+      Navbar text with an inline element
+    </span> -->
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/accounts/login">Login <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/accounts/signup">SignUp <span class="sr-only">(current)</span></a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+		<br>
+
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <a href="/gesture/handwriting"><img class="image" src="{% static '../static/pictures/letter-put.jpeg' %}"></a>
+                    <h3 class="heading">Steady Writing</h3>
+                </td>
+                <td>
+                    <a href="/gesture/well"><img class="image" src="{% static '../static/pictures/sleep-put.jpg' %}"></a>
+                    <h3 class="heading">Bed Time</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/gesture/alert"><img class="image" src="{% static '../static/pictures/sos-put.jpg' %}"></a>
+                    <h3 class="heading">On the Move</h3>
+                </td>
+                <td>
+                    <a href="/gesture/movement"><img class="image" src="{% static '../static/pictures/Fitness-put.jpg' %}"></a>
+                    <h3 class="heading">Exercise Right</h3>
+                </td>
+            </tr>
+        </table>
+
+        <iframe
+            allow="microphone;"
+            width="350"
+            height="500"
+            src="https://console.dialogflow.com/api-client/demo/embedded/f010f72f-b850-4ab2-9497-83de15b538ea" style="width: 300px;
+            border: 1px solid #ccc;
+            display: inline;
+            float: right;
+            margin-right: 20px;
+            margin-top: -520px;
+            margin-left: 800px;
+        ">
+        </iframe>
+    </div>
+
+	<!-- <div class="container" style="margin-left: 130px; display: inline;" > -->
+    
+</div>
+
+</body>
+</html>
